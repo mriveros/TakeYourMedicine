@@ -1,6 +1,6 @@
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pager"
+    android:id="@+id/mainLyt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
@@ -10,23 +10,46 @@
     titles for adjacent pages.
     -->
 
-    <android.support.v4.view.PagerTitleStrip
-        android:id="@+id/pager_title_strip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:background="#33b5e5"
-        android:paddingBottom="4dp"
-        android:paddingTop="4dp"
-        android:textColor="#fff" >
-
-    </android.support.v4.view.PagerTitleStrip>
-
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intervaloTxt"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
         android:ems="10"
-        android:text="Hola" />
+        android:hint="@string/fechaHintStr" />
 
-</android.support.v4.view.ViewPager>
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intervaloTxt"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="109dp" />
+
+    <EditText
+        android:id="@+id/intervaloTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:hint="@string/intervaloHintStr"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/duracionDiasTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intervaloTxt"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="@string/duracionDiasHintStr"
+        android:inputType="number" />
+
+</RelativeLayout>
