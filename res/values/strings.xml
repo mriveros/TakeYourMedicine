@@ -7,5 +7,7 @@
     <string name="nombreHintStr">Medicamento</string>
     <string name="fechaHintStr">Fecha inicial</string>
     <string name="duracionDiasHintStr">Duracion días</string>
+    <string name="medicinaHintStr">Medicina</string>
+    <string name="finitoRbStr">Medicina permanente</string>
 
 </resources>

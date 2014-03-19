@@ -11,45 +11,48 @@
     -->
 
     <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
+        android:id="@+id/medicinaTxt"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/intervaloTxt"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="@string/fechaHintStr" />
-
-    <DatePicker
-        android:id="@+id/datePicker1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/intervaloTxt"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="109dp" />
+        android:hint="@string/medicinaHintStr"
+        android:inputType="textMultiLine" />
 
     <EditText
         android:id="@+id/intervaloTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/duracionDiasTxt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="34dp"
         android:ems="10"
         android:hint="@string/intervaloHintStr"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/duracionDiasTxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/infinitoRb"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/duracionDiasHintStr"
         android:inputType="number" >
 
         <requestFocus />
     </EditText>
 
-    <EditText
-        android:id="@+id/duracionDiasTxt"
-        android:layout_width="wrap_content"
+    <RadioButton
+        android:id="@+id/infinitoRb"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/intervaloTxt"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:hint="@string/duracionDiasHintStr"
-        android:inputType="number" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/medicinaTxt"
+        android:layout_marginTop="28dp"
+        android:text="@string/finitoRbStr" />
 
 </RelativeLayout>
